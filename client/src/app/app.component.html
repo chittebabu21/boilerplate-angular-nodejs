@@ -1,1 +1,14 @@
-<h1>app is working</h1>
+<div>
+    <h1>Real Time Message</h1>
+    <div>
+        <input type="text" [(ngModel)]="newMessage" placeholder="Enter your message...">
+        <button (click)="sendMessage()">SEND</button>
+    </div>
+
+    <div>
+        <h3>Messages</h3>
+        <ul *ngFor="let message of messages">
+            <li>{{ message }}</li>
+        </ul>
+    </div>
+</div>
